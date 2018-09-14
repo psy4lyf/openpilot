@@ -140,8 +140,6 @@ BO_ 356 VSM11: 4 XXX
  SG_ CF_Esc_Act : 12|1@1+ (1,0) [0|1] "" XXX
  SG_ CF_Esc_CtrMode : 13|3@1+ (1,0) [0|7] "" XXX
  SG_ CF_Esc_Def : 16|1@1+ (1,0) [0|1] "" XXX
- SG_ COUNTER : 17|4@1+ (1,0) [0|15] "" XXX
- SG_ CHECKSUM : 24|8@1+ (1,0) [0|255] "" XXX
 
 BO_ 357 STEER_STATUS: 8 XXX
  SG_ STEER_TORQUE_SENSOR : 0|12@1+ (0.01,-20.48) [-20.48|20.47] "Nm" XXX
