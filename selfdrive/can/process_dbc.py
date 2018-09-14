@@ -8,7 +8,7 @@ from collections import Counter
 from common.dbc import dbc
 
 if len(sys.argv) != 3:
-  print "usage: %s dbc_path struct_path" % (sys.argv[0],)
+  print ("usage: %s dbc_path struct_path" % (sys.argv[0],))
   sys.exit(0)
 
 dbc_fn = sys.argv[1]
@@ -33,6 +33,13 @@ if can_dbc.name.startswith("honda") or can_dbc.name.startswith("acura"):
 elif can_dbc.name.startswith("toyota") or can_dbc.name.startswith("lexus"):
   checksum_type = "toyota"
   checksum_size = 8
+#2018.09.14 3:51PM add in Kia model to use Honda Checksum for radar and UI messages
+#Reason NIDEC radar is use, other messages doesnt need, it expected the name to have COUNTER and CHECKSUM in DBC
+#change DBC to process counter and checksum
+#dbc_template.cc is where process this
+elif can_dbc.name.startswith("kia"):
+  checksum_type = "honda"
+  checksum_size = 4
 else:
   checksum_type = None
 
