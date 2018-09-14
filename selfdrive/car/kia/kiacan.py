@@ -2,6 +2,8 @@ import struct
 
 import common.numpy_fast as np
 from selfdrive.config import Conversions as CV
+#2018.09.14 add vehicle state to see radar, change message one with out idx
+from selfdrive.car.kia.values import CAR, VEHICLE_STATE_MSG
  #2018.09.03 DV modified remove specific car
 
 # *** Honda specific ***
@@ -214,7 +216,7 @@ def create_ui_commands(packer, pcm_speed, hud, idx):
  # commands.append(packer.make_can_msg('RADAR_HUD', 0, radar_hud_values, idx)) #2018.09.03 change to bus 0
   return commands
 
-#2018.09.06 12:37AM add comment, this message for radar on bus  1,  channel 2 can of panda
+#2018.09.14 10:53AM add comment, this message for radar on bus  1,
 def create_radar_commands(v_ego, car_fingerprint, new_radar_config, idx):
   """Creates an iterable of CAN messages for the radar system."""
   commands = []
@@ -224,12 +226,17 @@ def create_radar_commands(v_ego, car_fingerprint, new_radar_config, idx):
   msg_0x300 = ("\xf9" + speed + "\x8a\xd0" +
                ("\x20" if idx == 0 or idx == 3 else "\x00") +
                "\x00\x00")
+  msg_0x301 = VEHICLE_STATE_MSG[car_fingerprint]
 
-  msg_0x301 = "\x00\x00\x50\x02\x51\x00\x00"
-  commands.append(make_can_msg(0x300, msg_0x300, idx, 1))
+  idx_0x300 = idx
+  if car_fingerprint == CAR.DUMMY:
+    idx_offset = 0xc if new_radar_config else 0x8   # radar in civic 2018 requires 0xc
+    idx_0x300 += idx_offset
 
+  commands.append(make_can_msg(0x300, msg_0x300, idx_0x300, 1))
   commands.append(make_can_msg(0x301, msg_0x301, idx, 1))
   return commands
+
 
 def spam_buttons_command(packer, button_val, idx):
   values = {

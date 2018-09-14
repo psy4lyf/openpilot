@@ -44,6 +44,11 @@ class CANPacker(object):
     addr, msg = self.pack_bytes(addr, values, counter)
     return [addr, 0, msg, bus]
 
+  #2018.09.14 add test to
+  def make_kiacan_msg(self, addr, bus, values):
+    addr, msg = self.pack_bytes(addr, values)
+    return [addr, 0, msg, bus]
+
 
 if __name__ == "__main__":
   ## little endian test

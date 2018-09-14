@@ -133,5 +133,15 @@ SPEED_FACTOR = {
 
 }
 
+# This message sends car info to the radar that is specific to the model. You
+# can determine this message by monitoring the OEM system.
+VEHICLE_STATE_MSG = {
+  CAR.DUMMY: "\x02\x38\x44\x32\x4f\x00\x00",
+  CAR.SOUL: "\x00\x00\x50\x02\x51\x00\x00",
+  CAR.SOUL1: "\x00\x00\x50\x02\x51\x00\x00",
+  CAR.SOUL2: "\x00\x00\x50\x02\x51\x00\x00",
+  CAR.SOUL3: "\x00\x00\x50\x02\x51\x00\x00",
+}
+
 ## TODO: get these from dbc file
 #HONDA_BOSCH = [CAR.DUMMY]   #2018.09.03 Define car dummy for test
