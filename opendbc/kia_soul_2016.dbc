@@ -134,8 +134,6 @@ BO_ 339 VSA_STATUS: 8 XXX
  SG_ TQI_SLW_TCS : 40|8@1+ (0.390625,0) [0|99.609375] "%" XXX
  SG_ CF_Esc_BrkCtl : 48|1@1+ (1,0) [0|1] "" XXX
  SG_ ESC_OFF_STEP : 49|2@1+ (1,0) [0|3] "" XXX
- SG_ COUNTER : 58|2@1+ (1,0) [0|3] "" XXX
- SG_ CHECKSUM : 60|4@1+ (1,0) [0|15] "" XXX
 
 BO_ 356 VSM11: 4 XXX
  SG_ CR_Esc_StrTqReq : 0|12@1+ (0.01,-20.48) [-20.48|20.47] "Nm" XXX
@@ -304,8 +302,6 @@ BO_ 1200 WHEEL_SPEEDS: 8 XXX
  SG_ WHL_SPD_AliveCounter_MSB : 30|2@1+ (1,0) [0|15] "" XXX
  SG_ WHL_SPD_Checksum_LSB : 46|2@1+ (1,0) [0|15] "" XXX
  SG_ WHL_SPD_Checksum_MSB : 62|2@1+ (1,0) [0|15] "" XXX
- SG_ COUNTER : 58|2@1+ (1,0) [0|3] "" XXX
- SG_ CHECKSUM : 60|4@1+ (1,0) [0|15] "" XXX
 
 BO_ 1264 CLU1: 8 XXX
  SG_ CF_Clu_CruiseSwState : 0|3@1+ (1,0) [0|7] "" XXX
@@ -323,16 +319,12 @@ BO_ 1264 CLU1: 8 XXX
  SG_ CF_Clu_SMKOption : 31|1@1+ (1,0) [0|1] "" XXX
  SG_ R_TqAcnOutC : 32|8@1+ (1,0) [0|51] "Nm" XXX
  SG_ CF_Clu_Odometer : 40|24@1+ (0.1,0) [0|1.67772e+006] "km" XXX
- SG_ COUNTER : 58|2@1+ (1,0) [0|3] "" XXX
- SG_ CHECKSUM : 60|4@1+ (1,0) [0|15] "" XXX
 
 BO_ 1306 TM_GEAR: 8 XXX
  SG_ TM_PARK : 9|1@0+ (1,0) [0|1] "" XXX
  SG_ TM_REVERSE : 10|1@0+ (1,0) [0|1] "" XXX
  SG_ TM_NEUTRAL : 11|1@0+ (1,0) [0|1] "" XXX
  SG_ TM_DRIVE : 12|1@0+ (1,0) [0|1] "" XXX
- SG_ COUNTER : 58|2@1+ (1,0) [0|3] "" XXX
- SG_ CHECKSUM : 60|4@1+ (1,0) [0|15] "" XXX
 
 BO_ 1680 SCM_FEEDBACK: 8 XXX
  SG_ CF_Clu_IGNSw : 0|3@1+ (1,0) [0|7] "" XXX
