@@ -114,7 +114,7 @@ BO_ 147 THROTTLE_REPORT: 8 XXX
  SG_ THROTTLE_REPORT_dtcs : 32|8@1+ (1,0) [0|0] "" XXX
  SG_ THROTTLE_REPORT_reserved : 40|24@1+ (1,0) [0|0] "" XXX
 
-BO_ 175 FAULT_REPORT: 8 XXX
+BO_ 185 FAULT_REPORT: 8 XXX
  SG_ FAULT_REPORT_magic : 0|16@1+ (1,0) [0|0] "" XXX
  SG_ FAULT_REPORT_fault_origin_id : 16|32@1+ (1,0) [0|0] "" XXX
  SG_ FAULT_REPORT_dtcs : 48|8@1+ (1,0) [0|0] "" XXX
