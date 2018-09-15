@@ -311,10 +311,10 @@ class CarState(object):
             self.brake_hold = 0  # not apply
             self.main_on = cp.vl["SCM_BUTTONS"]['MAIN_ON']  #ACC main using UI
             #2018.09.13 12:36AMEST add for seeing is brake switch press coming in
-            print("carstate.py brakepressed")
-            print(cp.vl["ENG_INFO"]['BRAKE_PRESSED'])
-            print("carstate.py ENG_INFO")
-            print(cp.vl["ENG_INFO"])
+           # print("carstate.py brakepressed")
+           # print(cp.vl["ENG_INFO"]['BRAKE_PRESSED'])
+           # print("carstate.py ENG_INFO")
+           # print(cp.vl["ENG_INFO"])
             self.brake_switch = cp.vl["ENG_INFO"]['BRAKE_PRESSED'] ==2 # 2018.09.02 DV "2"value is brake switch ON
             self.brake_pressed = cp.vl["ENG_INFO"]['BRAKE_PRESSED'] ==2  # 2018.09.02 change for Kia soul
             self.brake_switch_prev = cp.vl["ENG_INFO"]['BRAKE_PRESSED'] ==2  #2018.09.02 DV "2"value is brake switch ON
