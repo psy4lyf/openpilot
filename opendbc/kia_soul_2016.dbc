@@ -288,8 +288,8 @@ BO_ 880 GEARBOX: 8 XXX
  SG_ TQI_TCU_INC : 48|8@1+ (0.390625,0) [0|99.6094] "%" XXX
  SG_ CF_Tcu_SbwPInfo : 56|1@1+ (1,0) [0|1] "" XXX
  SG_ CF_Tcu_SptRdy : 57|1@1+ (1,0) [0|1] "" XXX
- SG_ COUNTER : 58|2@1+ (1,0) [0|3] "" XXX
- SG_ CHECKSUM : 60|4@1+ (1,0) [0|15] "" XXX
+ SG_ CF_Tcu_Alive3 : 58|2@1+ (1,0) [0|3] "" XXX
+ SG_ CF_Tcu_ChkSum3 : 60|4@1+ (1,0) [0|15] "" XXX
 
 BO_ 1200 WHEEL_SPEEDS: 8 XXX
  SG_ WHEEL_SPEED_FL : 0|14@01+ (0.03125,0) [0|250] "kph" XXX
