@@ -134,20 +134,24 @@ BO_ 339 VSA_STATUS: 8 XXX
  SG_ TQI_SLW_TCS : 40|8@1+ (0.390625,0) [0|99.609375] "%" XXX
  SG_ CF_Esc_BrkCtl : 48|1@1+ (1,0) [0|1] "" XXX
  SG_ ESC_OFF_STEP : 49|2@1+ (1,0) [0|3] "" XXX
+ SG_ AliveCounter_TCS1 : 52|4@1+ (1.0,0.0) [0.0|14.0] "" XXX
+ SG_ CheckSum_TCS1 : 56|8@1+ (1.0,0.0) [0.0|255.0] "" XXX
 
 BO_ 356 VSM11: 4 XXX
  SG_ CR_Esc_StrTqReq : 0|12@1+ (0.01,-20.48) [-20.48|20.47] "Nm" XXX
  SG_ CF_Esc_Act : 12|1@1+ (1,0) [0|1] "" XXX
  SG_ CF_Esc_CtrMode : 13|3@1+ (1,0) [0|7] "" XXX
  SG_ CF_Esc_Def : 16|1@1+ (1,0) [0|1] "" XXX
+ SG_ CF_Esc_AliveCnt : 17|4@1+ (1.0,0.0) [0.0|15.0] ""  XXX
+ SG_ CF_Esc_Chksum : 24|8@1+ (1.0,0.0) [0.0|255.0] ""  XXX
 
 BO_ 357 STEER_STATUS: 8 XXX
  SG_ STEER_TORQUE_SENSOR : 0|12@1+ (0.01,-20.48) [-20.48|20.47] "Nm" XXX
  SG_ STEER_TORQUE_MOTOR : 12|12@1+ (0.1,-204.8) [-204.8|204.7] "" XXX
  SG_ CF_Mdps_Def : 24|1@1+ (1,0) [0|1] "" XXX
  SG_ CF_Mdps_SErr : 25|1@1+ (1,0) [0|1] "" XXX
- SG_ COUNTER : 48|4@1+ (1,0) [0|15] "" XXX
- SG_ CHECKSUM : 56|8@1+ (1,0) [0|255] "" XXX
+ SG_ CF_Mdps_AliveCnt : 48|4@1+ (1,0) [0|15] "" XXX
+ SG_ CF_Mdps_Chksum : 56|8@1+ (1,0) [0|255] "" XXX
 
 BO_ 422 SCM_BUTTONS: 8 XXX
  SG_ CRUISE_BUTTONS : 7|3@0+ (1,0) [0|7] "" XXX
@@ -190,15 +194,15 @@ BO_ 544 IMU: 8 XXX
  SG_ YAW_RATE : 40|13@1+ (0.01,-40.95) [-40.95|40.96] "" XXX
  SG_ YAW_RATE_STAT : 53|1@1+ (1,0) [0|1] "" XXX
  SG_ YAW_RATE_DIAG : 54|1@1+ (1,0) [0|1] "" XXX
- SG_ COUNTER : 56|4@1+ (1,0) [0|15] "" XXX
- SG_ CHECKSUM : 60|4@1+ (1,0) [0|15] "" XXX
+ SG_ ESP12_AliveCounter : 56|4@1+ (1.0,0.0) [0.0|15.0] "" XXX
+ SG_ ESP12_Checksum : 60|4@1+ (1.0,0.0) [0.0|15.0] "" XXX
 
 BO_ 688 STEERING_SENSORS: 5 XXX
  SG_ STEER_ANGLE : 0|16@1- (0.1,0) [-3276.8|3276.7] "Deg" XXX
- SG_ STEERING_ANGLE_RATE : 16|8@0+ (4,0) [0|1016.0] "" XXX
+ SG_ STEERING_ANGLE_RATE : 16|8@1+ (4,0) [0|1016.0] "" XXX
  SG_ SAS_Stat : 24|8@1+ (1,0) [0|255] "" XXX
- SG_ COUNTER : 32|4@1+ (1,0) [0|15] "" XXX
- SG_ CHECKSUM : 36|4@1+ (1,0) [0|15] "" XXX
+ SG_ MsgCount : 32|4@1+ (1.0,0.0) [0.0|15.0] ""  XXX
+ SG_ CheckSum : 36|4@1+ (1.0,0.0) [0.0|15.0] ""  XXX
 
 BO_ 780 ACC_HUD: 8 XXX
  SG_ PCM_SPEED : 7|16@0+ (0.01,0) [0|250] "kph" XXX
@@ -238,16 +242,12 @@ BO_ 790 ENGINE_DATA: 8 XXX
  SG_ TQFR : 40|8@1+ (0.390625,0) [0|99.6094] "%" XXX 
  SG_ XMISSION_VSPEED : 48|8@1+ (1,0) [0|254] "km/h" XXX 
  SG_ RATIO_TQI_BAS_MAX_STND : 56|8@1+ (0.0078,0) [0|2] "" XXX
- SG_ COUNTER : 58|2@1+ (1,0) [0|3] "" XXX
- SG_ CHECKSUM : 60|4@1+ (1,0) [0|15] "" XXX
 
 BO_ 809 ENG_INFO: 8 XXX
  SG_ VB_OFF_ACT : 24|1@1+ (1,0) [0|1] "" XXX
  SG_ ACC_ACT : 30|1@1+ (1,0) [0|1] "" XXX
  SG_ BRAKE_PRESSED : 32|2@1+ (1,0) [0|3] "" XXX
  SG_ PEDAL_GAS : 48|8@1+ (0.3906,0) [0|99.603] "%" XXX
- SG_ COUNTER : 58|2@1+ (1,0) [0|3] "" XXX
- SG_ CHECKSUM : 60|4@1+ (1,0) [0|15] "" XXX
 
 BO_ 829 LKAS_HUD: 5 XXX
  SG_ CAM_TEMP_HIGH : 7|1@0+ (1,0) [0|255] "" XXX
