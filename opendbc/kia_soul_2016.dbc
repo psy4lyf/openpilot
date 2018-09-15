@@ -62,7 +62,6 @@ BO_ 115 BRAKE_REPORT: 8 XXX
  SG_ BRAKE_REPORT_dtcs : 32|8@1+ (1,0) [0|0] "" XXX
  SG_ BRAKE_REPORT_reserved : 40|24@1+ (1,0) [0|0] "" XXX
  SG_ COUNTER : 61|2@0+ (1,0) [0|3] "" XXX
- SG_ CHECKSUM : 59|4@0+ (1,0) [0|15] "" XXX
 
 BO_ 128 STEERING_ENABLE: 8 XXX
  SG_ STEERING_ENABLE_magic : 0|16@1+ (1,0) [0|0] "" XXX
@@ -90,7 +89,6 @@ BO_ 131 STEERING_REPORT: 8 XXX
  SG_ STEERING_REPORT_dtcs : 32|8@1+ (1,0) [0|0] "" XXX
  SG_ STEERING_REPORT_reserved : 40|24@1+ (1,0) [0|0] "" XXX
  SG_ COUNTER : 61|2@0+ (1,0) [0|3] "" XXX
- SG_ CHECKSUM : 59|4@0+ (1,0) [0|15] "" XXX
 
 BO_ 144 THROTTLE_ENABLE: 8 XXX
  SG_ THROTTLE_ENABLE_magic : 0|16@1+ (1,0) [0|0] "" XXX
@@ -118,7 +116,6 @@ BO_ 147 THROTTLE_REPORT: 8 XXX
  SG_ THROTTLE_REPORT_dtcs : 32|8@1+ (1,0) [0|0] "" XXX
  SG_ THROTTLE_REPORT_reserved : 40|24@1+ (1,0) [0|0] "" XXX
  SG_ COUNTER : 61|2@0+ (1,0) [0|3] "" XXX
- SG_ CHECKSUM : 59|4@0+ (1,0) [0|15] "" XXX
 
 BO_ 175 FAULT_REPORT: 8 XXX
  SG_ FAULT_REPORT_magic : 0|16@1+ (1,0) [0|0] "" XXX
@@ -126,7 +123,6 @@ BO_ 175 FAULT_REPORT: 8 XXX
  SG_ FAULT_REPORT_dtcs : 48|8@1+ (1,0) [0|0] "" XXX
  SG_ FAULT_REPORT_reserved : 56|8@1+ (1,0) [0|0] "" XXX
  SG_ COUNTER : 61|2@0+ (1,0) [0|3] "" XXX
- SG_ CHECKSUM : 59|4@0+ (1,0) [0|15] "" XXX
 
 BO_ 339 VSA_STATUS: 8 XXX
  SG_ ABS_ACT : 10|1@1+ (1,0) [0|1] "" XXX
