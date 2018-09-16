@@ -34,9 +34,9 @@ static int kia_tx_hook(CAN_FIFOMailBox_TypeDef *to_send) {
   return true;
 }
 
-static int kia_tx_lin_hook(int lin_num, uint8_t *data, int len) {
-  return true;
-}
+//static int kia_tx_lin_hook(int lin_num, uint8_t *data, int len) {
+ // return true;
+//}
 
 
 const safety_hooks kia_hooks = {
