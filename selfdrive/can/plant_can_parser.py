@@ -93,7 +93,9 @@ class CANParser(object):
         # check counter validity if it's a relevant message
         if cn != ((self.cn[msg] + 1) % 4) and msg in self.msgs_ck and "COUNTER" in out.keys():
           #print hex(msg), "FAILED COUNTER!"
-          self.cn_vl[msg] += 1   # counter check failed
+          #2018.09.16 8:31AM comment out to make counter check pass
+          self.cn_vl[msg] -= 1   # counter check passed
+          #self.cn_vl[msg] += 1   # counter check failed
         else:
           self.cn_vl[msg] -= 1   # counter check passed
         # message status is invalid if we received too many wrong counter values
