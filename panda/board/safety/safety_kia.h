@@ -19,9 +19,9 @@ int ego_speed = 0;
 
 void kia_rx_hook(CAN_FIFOMailBox_TypeDef *to_push) {}
 
-int kia_ign_hook() {
-  return -1; // use GPIO to determine ignition
-}
+//int kia_ign_hook() {
+  //return -1; // use GPIO to determine ignition
+//}
 
 // FIXME
 // *** all output safety mode ***
@@ -43,6 +43,6 @@ const safety_hooks kia_hooks = {
   .init = kia_init,
   .rx = kia_rx_hook,
   .tx = kia_tx_hook,
-  .tx_lin = kia_tx_lin_hook,
-  .ignition = kia_ign_hook,
+  //.tx_lin = kia_tx_lin_hook,
+  //.ignition = kia_ign_hook,
 };
