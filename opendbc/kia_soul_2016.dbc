@@ -129,7 +129,7 @@ BO_ 339 VSA_STATUS: 8 XXX
  SG_ AliveCounter_TCS1 : 52|4@1+ (1.0,0.0) [0.0|14.0] "" XXX
  SG_ CheckSum_TCS1 : 56|8@1+ (1.0,0.0) [0.0|255.0] "" XXX
 
-BO_ 356 VSM11: 4 XXX
+BO_ 356 VSM11: 8 XXX
  SG_ CR_Esc_StrTqReq : 0|12@1+ (0.01,-20.48) [-20.48|20.47] "Nm" XXX
  SG_ CF_Esc_Act : 12|1@1+ (1,0) [0|1] "" XXX
  SG_ CF_Esc_CtrMode : 13|3@1+ (1,0) [0|7] "" XXX
