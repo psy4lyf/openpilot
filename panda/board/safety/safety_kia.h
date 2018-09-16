@@ -97,7 +97,7 @@ static int kia_tx_hook(CAN_FIFOMailBox_TypeDef *to_send) {
   int current_controls_allowed = controls_allowed && !(pedal_pressed);
 
   // BRAKE: safety check
- if ((to_send->RIR>>21) == 0x1FA) {
+ if ((to_send->RIR>>21) == 0x72) {
    if (current_controls_allowed) {
      if ((to_send->RDLR & 0xFFFFFF3F) != to_send->RDLR) return 0;
    } else {
@@ -106,7 +106,7 @@ static int kia_tx_hook(CAN_FIFOMailBox_TypeDef *to_send) {
  }
 
   // STEER: safety check
- if ((to_send->RIR>>21) == 0xE4 || (to_send->RIR>>21) == 0x194) {
+ if ((to_send->RIR>>21) == 0x82  {
    if (current_controls_allowed) {
       // all messages are fine here
    } else {
@@ -115,7 +115,7 @@ static int kia_tx_hook(CAN_FIFOMailBox_TypeDef *to_send) {
   }
 
  // GAS: safety check
-  if ((to_send->RIR>>21) == 0x200) {
+  if ((to_send->RIR>>21) == 0x92) {
    if (current_controls_allowed) {
       // all messages are fine here
     } else {
@@ -126,10 +126,10 @@ static int kia_tx_hook(CAN_FIFOMailBox_TypeDef *to_send) {
   // FORCE CANCEL: safety check only relevant when spamming the cancel button in Bosch HW
   // ensuring that only the cancel button press is sent (VAL 2) when controls are off.
   // This avoids unintended engagements while still allowing resume spam
- if (((to_send->RIR>>21) == 0x296) && bosch_hardware &&
-     !current_controls_allowed && ((to_send->RDTR >> 4) & 0xFF) == 0) {
-   if (((to_send->RDLR >> 5) & 0x7) != 2) return 0;
- }
+ //if (((to_send->RIR>>21) == 0x296) && bosch_hardware &&
+ //    !current_controls_allowed && ((to_send->RDTR >> 4) & 0xFF) == 0) {
+ //  if (((to_send->RDLR >> 5) & 0x7) != 2) return 0;
+ //}
 
   // 1 allows the message through
   return true;
