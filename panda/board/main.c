@@ -559,9 +559,9 @@ int main() {
   // enable USB
   usb_init();
 
-  // 2018.09.16 10:52PMEST change default to all aoutput
+  // 2018.09.16 10:52PMEST change default to kia
   // default to silent mode to prevent issues with Ford
-  safety_set_mode(SAFETY_ALLOUTPUT, 0);
+  safety_set_mode(SAFETY_KIA, 0);
   can_silent = ALL_CAN_LIVE;
   can_init_all();
   //safety_set_mode(SAFETY_NOOUTPUT, 0);
