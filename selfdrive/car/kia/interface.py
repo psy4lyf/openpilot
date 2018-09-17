@@ -13,7 +13,7 @@ from selfdrive.car.kia.carstate import CarState, get_can_parser
 from selfdrive.car.kia.values import CruiseButtons, CM, BP, AH, CAR ,DBC
 
 from selfdrive.controls.lib.planner import A_ACC_MAX
-import panda
+
 #try:
   #from selfdrive.car.honda.carcontroller import CarController
 #except ImportError:
@@ -163,7 +163,7 @@ class CarInterface(object):
 
         #remove #radar off can from base
     #2018.09.16 10:09PMEST set all output
-    panda.set_safety_mode(Panda.SAFETY_ALLOUTPUT)
+    #panda.set_safety_mode(Panda.SAFETY_ALLOUTPUT)
 
     #ret.safetyModel = car.CarParams.SafetyModels.kia
     #2018.09.16 10:11PMEST set to all output
