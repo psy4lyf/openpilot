@@ -162,8 +162,12 @@ class CarInterface(object):
     ret.carFingerprint = candidate
 
         #remove #radar off can from base
+    #2018.09.16 10:09PMEST set all output
+    panda.set_safety_mode(Panda.SAFETY_ALLOUTPUT)
 
-    ret.safetyModel = car.CarParams.SafetyModels.kia
+    #ret.safetyModel = car.CarParams.SafetyModels.kia
+    #2018.09.16 10:11PMEST set to all output
+    ret.safetyModel = car.CarParams.SafetyModels.ALLOUTPUT
      #ret.enableCamera = not any(x for x in CAMERA_MSGS if x in fingerprint)
     ret.enableCamera = not any(x for x in CAMERA_MSGS_SOUL if x in fingerprint)  #2018.09.02 DV change for KIA message
       #ret.enableGasInterceptor = 0x201 in fingerprint
