@@ -40,9 +40,11 @@
 #define SAFETY_FORD 5
 #define SAFETY_CADILLAC 6
 #define SAFETY_HYUNDAI 7
+#define SAFETY_SUBARU 8   /*2018.09.17 add in subaru */
+#define SAFETY_KIA 9   /*2018.09.04 add in Kia */
 #define SAFETY_TOYOTA_NOLIMITS 0x1336
 #define SAFETY_ALLOUTPUT 0x1337
-#define SAFETY_KIA 8   /*2018.09.04 add in Kia */
+
 
 namespace {
 
@@ -118,7 +120,10 @@ void *safety_setter_thread(void *s) {
   case (int)cereal::CarParams::SafetyModels::HYUNDAI:
     safety_setting = SAFETY_HYUNDAI;
     break;
-  case (int)cereal::CarParams::SafetyModels::KIA:  /*2018.09.04 add Kia */
+  case (int)cereal::CarParams::SafetyModels::SUBARU:  /*2018.09.17 add subaru*/
+    safety_setting = SAFETY_SUBARU;
+    break;
+  case (int)cereal::CarParams::SafetyModels::KIA:  /*2018.09.04 add kia */
     safety_setting = SAFETY_KIA;
     break;
   default:

@@ -4,7 +4,8 @@ import os
 from panda import ensure_st_up_to_date
 
 def main(gctx=None):
-  ensure_st_up_to_date()
+
+ # ensure_st_up_to_date()    #2018.09.17 10:08PMEST update to match subaru
 
   os.chdir("boardd")
   os.execvp("./boardd", ["./boardd"])

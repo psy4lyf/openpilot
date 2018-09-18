@@ -15,15 +15,12 @@ static int kia_tx_hook(CAN_FIFOMailBox_TypeDef *to_send) {
   return true;
 }
 
-static int kia_tx_lin_hook(int lin_num, uint8_t *data, int len) {
-  return true;
-}
 
 const safety_hooks kia_hooks = {
   .init = kia_init,
   .rx = kia_rx_hook,
   .tx = kia_tx_hook,
-  .tx_lin = kia_tx_lin_hook,
+  .tx_lin = nooutput_tx_lin_hook,
   .ignition = kia_ign_hook,
-  //.fwd = kia_fwd_hook,
+  .fwd = nooutput_fwd_hook,
 };
